@@ -14,18 +14,7 @@ const MOODS = [
 
 // Seed de datos de ejemplo para que el mosaico no esté vacío al inicio
 const seedData = () => {
-  const today = new Date();
-  const entries = {};
-  for (let i = 30; i >= 1; i--) {
-    if (Math.random() > 0.35) {
-      const d = new Date(today);
-      d.setDate(today.getDate() - i);
-      const key = d.toISOString().split("T")[0];
-      const mood = MOODS[Math.floor(Math.random() * MOODS.length)];
-      entries[key] = { mood, note: "" };
-    }
-  }
-  return entries;
+  return {};
 };
 
 const formatDate = (dateStr) => {
